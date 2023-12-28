@@ -6,7 +6,7 @@ RUN apt-get -y update && \
     apt-get install -y curl && \
     curl -sLk https://github.com/sorenisanerd/gotty/releases/download/${GOTTY_TAG_VER}/gotty_${GOTTY_TAG_VER}_linux_amd64.tar.gz \
     | tar xzC /usr/local/bin 
-#
+
 RUN echo 'USER="ADMIN"' >> gotty.sh
 RUN echo 'PASS="${TTY_PASSWORD:-$(head -c 25 /dev/urandom | base64)}"' >> gotty.sh
 RUN echo 'echo USER: $USER' >> gotty.sh
