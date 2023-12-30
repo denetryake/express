@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_denetryake_express_1703929031824-push-trigger-input-set
+  identifier: Build_denetryake_express_1703929031824pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_denetryake_express_1703929031824
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
